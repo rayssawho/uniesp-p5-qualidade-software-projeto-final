@@ -1,21 +1,29 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
-Given('the user is on the login page', () => {
-    // Cypress code to navigate to the login page
+Given('o usuário encontra-se na página de autenticidade de documentos do site TCU', () => {
+    cy.visit('https://autenticidade-documento.apps.tcu.gov.br/home')
   });
 
-  When('the user enters valid username and password', () => {
+  When('o usuário digita um código de documento correto na barra de pesquisa', () => {
     // Cypress code to enter valid credentials
   });
 
-  Then('the user should be logged in successfully', () => {
+  Then('o usuário deve visualizar o resultado da validação', () => {
     // Cypress code to assert successful login
   });
 
-  When('the user enters invalid username and password', () => {
+  When('o usuário digita um código de documento incorreto na barra de pesquisa', () => {
     // Cypress code to enter invalid credentials
   });
 
-  Then('the user should see an error message', () => {
+  Then('o usuário deve visualizar o resultado de documento não encontrado', () => {
+    // Cypress code to assert error message
+  });
+
+  When('o usuário não digita no espaço de pesquisa de consulta', () => {
+    // Cypress code to enter invalid credentials
+  });
+
+  Then('o usuário deve visualizar a mensagem de informação obrigatória', () => {
     // Cypress code to assert error message
   });
